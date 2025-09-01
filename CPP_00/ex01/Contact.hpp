@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 04:44:22 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/09/01 17:54:52 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/09/01 20:40:50 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ public:
     std::string GetFirstName();
     std::string GetLastName();
     std::string GetNickName();
+    std::string GetPhoneNumber();
+    std::string DarkestSecret();
 };
 
 std::string Get_Input(const std::string &promt);
