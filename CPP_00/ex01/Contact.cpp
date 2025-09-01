@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 05:00:54 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/09/01 00:03:15 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/09/01 17:55:29 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,22 @@ void Contact::SetPhoneNumber(const std::string number) {
 
 void Contact::SetDarkestSecret(const std::string secret) {
     darkestSecret = secret;
+}
+
+std::string Contact::GetFirstName(){
+    return firstName;   
+}
+
+std::string Contact::GetNickName(){
+    return nickName;   
+}
+
+std::string Contact::GetLastName(){
+    return lastName;   
+}
+
+std::string truncate(std::string str){
+    if (str.length() > 10)
+        return str.substr(0, 9) + ".";
+    return str;
 }

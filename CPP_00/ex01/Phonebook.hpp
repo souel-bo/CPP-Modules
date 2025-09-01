@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 04:42:53 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/08/31 23:15:13 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/09/01 17:40:32 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ class Phonebook
 private:
     Contact contact[8];
     int index;
+    int count;
 public:
     Phonebook();
     void AddContact();
+    void SearchContact();
 };
-
 
 #endif

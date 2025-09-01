@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 04:57:01 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/08/31 23:42:53 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/09/01 17:58:23 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main()
 {
-    Contact contact;
     Phonebook phonebook;
     std::string promt;
 
@@ -31,5 +30,9 @@ int main()
         }   
         if (promt == "ADD")
             phonebook.AddContact();
+        else if (promt == "SEARCH")
+            phonebook.SearchContact();
+        else
+            std::cout << "Invalid Command Try : (ADD, SEARCH, EXIT)"<< std::endl;
     } while (promt != "EXIT");
 }
