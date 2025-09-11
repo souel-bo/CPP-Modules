@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:55:58 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/09/11 18:40:10 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/09/11 18:48:35 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Zombie
         ~Zombie();
 };
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+
 
 #endif

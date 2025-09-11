@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 17:55:58 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/09/11 18:40:10 by souel-bo         ###   ########.fr       */
+/*   Created: 2025/09/11 18:28:44 by souel-bo          #+#    #+#             */
+/*   Updated: 2025/09/11 18:48:44 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#include "Zombie.hpp"
 
-#include <iostream>
-
-class Zombie
+int main()
 {
-    private :
-        std::string name;
-    public :
-        Zombie(std::string Name);
-        void announce( void );
-        ~Zombie();
-};
-
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
-
-#endif
+    
+}
