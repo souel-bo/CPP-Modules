@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:11:37 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/10/20 18:19:23 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:57:49 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ class Animal
 		Animal();
 		Animal(const Animal &other);
 		Animal& operator=(const Animal& other);
-		~Animal();
-		void makeSound() const;
+		virtual ~Animal();
+		virtual void makeSound() const;
+		std::string getType() const;
 } ;
 
 #endif

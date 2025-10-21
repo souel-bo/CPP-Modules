@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 14:38:49 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/10/21 14:54:47 by souel-bo         ###   ########.fr       */
+/*   Created: 2025/10/21 16:41:22 by souel-bo          #+#    #+#             */
+/*   Updated: 2025/10/21 16:41:55 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
-Dog::Dog(){
-    type = "Dog";
-}
+WrongAnimal::WrongAnimal() : type("unknown"){}
 
-Dog::Dog(const Dog& other){
+WrongAnimal::WrongAnimal(const WrongAnimal& other){
     *this = other;
 }
-Dog& Dog::operator=(const Dog& other){
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other){
     if (this != &other)
         this->type = other.type;
     return *this;
 }
-Dog::~Dog(){
-    std::cout << "Dog Destructor called" << std::endl;
+WrongAnimal::~WrongAnimal(){
+    std::cout << "WrongAnimal Destructor called" << std::endl;
 }
 
-void Dog::makeSound() const{
-    std::cout << "WOOF" << std::endl;
+void WrongAnimal::makeSound() const{
+    std::cout << "WrongANIMAL SOUND" << std::endl;
 }
-
-std::string Dog::getType() const
+std::string WrongAnimal::getType() const
 {
     return type;
 }
