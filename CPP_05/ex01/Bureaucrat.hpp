@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 10:01:00 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/12/21 11:36:16 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/12/23 13:29:17 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -40,6 +41,7 @@ class Bureaucrat
         };
         void Increment_Grade();
         void Decrement_Grade();
+        void signForm(Form &form);
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
