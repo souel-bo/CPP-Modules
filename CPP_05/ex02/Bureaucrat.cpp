@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 10:07:37 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/12/25 13:57:23 by root             ###   ########.fr       */
+/*   Updated: 2025/12/25 13:49:46 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,19 @@ const char* Bureaucrat::GradeTooHighException::what() const throw() {
 const char* Bureaucrat::GradeTooLowException::what() const throw() {
     return "Grade is too low!";
 }
-void ::Bureaucrat::signForm(Form &form){
+void ::Bureaucrat::signForm(AForm &form){
     form.beSigned(*this);
     if (form.get_Signature())
         std::cout << *this << " signed " << form << std::endl;
     else
         std::cout << *this << "couldn't sign" << form << "because : grade too low" << std::endl; 
+}
+
+void ::Bureaucrat::executeForm(AForm const &form){
+    try {
+        form.execute(*this);
+        std::cout << *this << " executed " << form.get_Name() << std::endl;
+    } catch (std::exception &e) {
+        std::cout << *this << " could not execute " << form.get_Name() << " because : " << e.what() << std::endl;
+    }
 }
