@@ -1,33 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/25 17:24:57 by souel-bo          #+#    #+#             */
+/*   Updated: 2025/12/25 17:45:17 by souel-bo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-#include <iostream>
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
-    try
-    {
-        Bureaucrat bob("Bob", 140);
-        Bureaucrat alice("Alice", 150);
-        Bureaucrat charlie("Charlie", 130);
+    try {
+        // Bureaucrats
+        Bureaucrat boss("Alice", 1);
+        Bureaucrat mid("Bob", 75);
+        Bureaucrat intern("Charlie", 150);
 
-        ShrubberyCreationForm form("home");
+        std::cout << boss << std::endl;
+        std::cout << mid << std::endl;
+        std::cout << intern << std::endl;
 
-        std::cout << "Bob tries to sign the form..." << std::endl;
-        bob.signForm(form);
+        // Forms
+        ShrubberyCreationForm shrub("home");
+        RobotomyRequestForm robot("Bob");
+        PresidentialPardonForm pardon("Charlie");
 
-        // std::cout << "Alice tries to sign the form..." << std::endl;
-        // alice.signForm(form);
+        std::cout << shrub << std::endl;
+        std::cout << robot << std::endl;
+        std::cout << pardon << std::endl;
 
-        std::cout << "Bob tries to execute the form..." << std::endl;
-        bob.executeForm(form);
+        // Signing forms
+        // intern.signForm(shrub); // should fail
+        mid.signForm(shrub);    // should succeed
+        boss.signForm(pardon);  // should succeed
+        // mid.signForm(robot);    // should fail
+        boss.signForm(robot);   // should succeed
 
-        std::cout << "Charlie tries to execute the form..." << std::endl;
-        charlie.executeForm(form);
+        std::cout << std::endl;
+
+        // Executing forms
+        // intern.executeForm(shrub); // fail, grade too low
+        mid.executeForm(shrub);    // succeed
+        boss.executeForm(pardon);  // succeed
+        // mid.executeForm(robot);    // fail, not signed or grade too low
+        boss.executeForm(robot);   // succeed, random success/failure
+
+    } catch (std::exception &e) {
+        std::cout << "Exception caught in main: " << e.what() << std::endl;
     }
-    catch (std::exception &e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
-
-    return 0;
 }
