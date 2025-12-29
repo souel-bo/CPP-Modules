@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 17:10:56 by souel-bo          #+#    #+#             */
-/*   Updated: 2025/12/29 17:11:42 by souel-bo         ###   ########.fr       */
+/*   Updated: 2025/12/29 18:40:58 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <string>
 #include <cstdlib>
 #include <cfloat>
+#include <cmath>
+#include <climits>
 class ScalarConverter
 {
     public :

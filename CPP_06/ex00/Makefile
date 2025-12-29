@@ -1,4 +1,4 @@
-NAME = static_cast
+NAME = convert
 
 SRC = ScalarConverter.cpp main.cpp
 
@@ -10,7 +10,7 @@ $(NAME): $(SRC) ScalarConverter.hpp
 	c++ $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	rm -f *.o
 
 fclean :
 	rm -rf $(NAME)
