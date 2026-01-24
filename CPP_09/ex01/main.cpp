@@ -6,7 +6,7 @@
 /*   By: souel-bo <souel-bo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 23:24:14 by souel-bo          #+#    #+#             */
-/*   Updated: 2026/01/21 00:31:02 by souel-bo         ###   ########.fr       */
+/*   Updated: 2026/01/24 18:51:21 by souel-bo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int main(int argc, char **argv)
     }
     try {
         RPN rpnCalculator;
-        std::cout  << rpnCalculator.evaluate(argv[1]) << std::endl;
+        std::string str(argv[1]);
+        if (str.size() < 3)
+            throw std::runtime_error("Error");
+        rpnCalculator.evaluate(argv[1]);
     }
     catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
